@@ -1,0 +1,76 @@
+---
+title: "Assignment 1"
+author: "Yener Alboga"
+date: "2022-10-16"
+output: html_document
+---
+
+# 1.About Me 
+Hello all !
+I am Yener Alboga . Although I entered 2009, I graduated from Boğazici University Industrial Engineering in 2020(No typo just 5 years deviation from expected graduation year:) Besides, I have about 9 years of professional work experience. The first 3-4 years of this are in the supply chain. After that, I worked in Quick commerce and e-commerce companies. Currently, I am giving consultancy on catalogue management to a company called Zoodmall, which is trying to sell products from Turkey and China as B2C in MENA and CIS countries. At the same time, I am a seller who tries to sell products with fulfilled by merchant and Retail arbitrage model on eBay, AliExpress and Amazon. With the development of my Data Science skills, I aim to carry out productive and creative work in companies that I will work in the field of e-commerce in the medium term. In the long term, I aim to have a business that I can manage independently of location from anywhere in the world by establishing an e-commerce model with a high level of efficiency.
+
+
+[My LinkedIn Profile] (https://www.linkedin.com/in/yener-alboga/)
+
+# 2.UseR-2022 Video
+An Introduction to the Apple Health Exports speech by Godin is interesting. Although I currently believe that smartwatches are the devices that leave us doomed to more notifications and chargers, I believe that they will have great support in health in the near future.
+
+
+https://www.rstudio.com/conference/2022/talks/introduction-to-apple-health-export/
+
+
+
+# 3.Some Interesting R Posts
+
+
+I think it is very fun and valuable to be able to analyse with R and twitter. It's important to be able to do this as an influencer or as a policy follower etc. We can see why which tweet gets the most engagement and how it reaches larger audiences or in which time frame it will get more engagement etc. (I don’t know fancy wording for peak time of social media but for radio channels it’s called “drive time”.)
+
+https://www.toptal.com/r/social-network-analysis-in-r-gephi-tutorial
+
+
+There is a recommendation library to analyse data in R which can help us to upsell or recommend new song that we think the user might like by looking at their historical data. #recommenderlab Netflix has established a recommendation system using more than 20000 variables. These variables consider the viewing habits of users with similar characteristics, as well as variables such as user data, region and the year of production of the film's actors.
+
+
+https://www.data-mania.com/blog/how-to-build-a-recommendation-engine-in-r/
+
+
+We understood the importance of logistics even better during the pandemic and the global crisis that followed. Logistics systems have very heavy costs. Therefore, finding the optimum is very valuable. If we explain this with current examples, the decision of Getir, Yemeksepeti and Bisu dark store locations or Trendyol Express distribution points is of great importance in increasing the efficiency of the warehouse. (Example: Rental expenses, ease of access to the supplier or distance to the customer) Below link has very basic calculation for finding/deciding warehouse locations but some with maps libraries and variables we can develop a great GIS tool.
+
+
+https://www.supplychaindataanalytics.com/monte-carlo-simulation-in-r-for-warehouse-location-risk-assessment/
+
+# 4.Progress Journal Page
+https://pjournal.github.io/mef06-yeneralboga/
+
+
+Thank You !
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown 
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
