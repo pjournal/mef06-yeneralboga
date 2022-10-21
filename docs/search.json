@@ -33,5 +33,12 @@
     "title": "1  Assignment 1",
     "section": "1.4 My Progress Journal Home Page",
     "text": "1.4 My Progress Journal Home Page\nHome"
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "2  Assignment 2(Format and output to be updated",
+    "section": "",
+    "text": "3 If we want to see how many flights held by which manufacturers’ planes\nplanes %>% group_by(manufacturer) %>% summarise(count=n()) %>% arrange(desc(count)) %>% print(n=Inf)\n\n\n4 If we want to see how many flights held by which manufacturers’ planes before year 2000 with more than 2 engines\nplanes%>% filter(year<2000 & engines >2)%>% group_by(manufacturer)%>% summarize(count=n())%>% arrange(desc(count))%>% print(n=Inf)"
   }
 ]

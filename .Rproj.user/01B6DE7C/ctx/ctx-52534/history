@@ -1,0 +1,57 @@
+library(dplyr)
+library(nycflights13)
+library(tidyverse)
+nycflights13::planes
+planes %>%
+group_by(year) %>%
+summarise(count=n()) %>%
+arrange(year) %>%
+print(n=47)
+planes %>%
+group_by(model) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+planes %>%
+group_by(manufacturer) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+planes %>%
+group_by(manufacturer,year) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+planes %>%
+group_by(manufacturer,dest) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+flights%>%
+filter(arr_delay > dep_delay)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count)
+rlang::last_error()
+flights%>%
+filter(arr_delay > dep_delay)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count)%>%
+print(n=Inf)
+nycflights13::planes
+install.packages("nycflights13")
+install.packages("tidyverse")
+install.packages("dplyr")
+nycflights13::planes
+planes %>%
+group_by(manufacturer) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+flights%>%
+filter(arr_delay > dep_delay)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count)%>%
+print(n=Inf)
