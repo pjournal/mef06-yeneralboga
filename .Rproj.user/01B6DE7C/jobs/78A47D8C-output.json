@@ -10,3 +10,6 @@
 [1,"Watching files for changes\nBrowse at http://localhost:3230/\n"]
 [1,"GET: /\n"]
 [1,"  /cart.json (404: Not Found)\n"]
+[1,"WARNING: Error removing file C:\\Users\\yener\\OneDrive\\Documents\\GitHub\\mef06-yeneralboga\\.quarto\\_freeze\\site_libs\\bootstrap: The directory is not empty. (os error 145), remove 'C:\\Users\\yener\\OneDrive\\Documents\\GitHub\\mef06-yeneralboga\\.quarto\\_freeze\\site_libs\\bootstrap'\n"]
+[1,"GET: /assignment2.html\n"]
+[1,"  /cart.json (404: Not Found)\n"]
