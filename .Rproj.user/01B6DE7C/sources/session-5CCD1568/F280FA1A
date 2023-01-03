@@ -1,7 +1,7 @@
 {
     "id": "F280FA1A",
-    "path": "~/GitHub/mef06-yeneralboga/OR Case.qmd",
-    "project_path": "OR Case.qmd",
+    "path": "~/GitHub/mef06-yeneralboga/OR Case.rmd",
+    "project_path": "OR Case.rmd",
     "type": "quarto_markdown",
     "hash": "959207671",
     "contents": "",
@@ -21,7 +21,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1672776168476,
+    "last_content_update": 1672776168,
     "read_only": false,
     "read_only_alternatives": []
 }
