@@ -141,10 +141,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#german-first-division-basketball-league-scheduling-case-study" id="toc-german-first-division-basketball-league-scheduling-case-study" class="nav-link active" data-scroll-target="#german-first-division-basketball-league-scheduling-case-study"><span class="toc-section-number">4</span>  German First Division Basketball League Scheduling Case Study</a></li>
-  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective"><span class="toc-section-number">5</span>  1. Objective</a></li>
-  <li><a href="#constraints" id="toc-constraints" class="nav-link" data-scroll-target="#constraints"><span class="toc-section-number">6</span>  2. Constraints</a></li>
-  <li><a href="#case-source" id="toc-case-source" class="nav-link" data-scroll-target="#case-source"><span class="toc-section-number">7</span>  4. Case Source</a></li>
+  <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective"><span class="toc-section-number">3.1</span>  Objective</a></li>
+  <li><a href="#constraints" id="toc-constraints" class="nav-link" data-scroll-target="#constraints"><span class="toc-section-number">3.2</span>  Constraints</a></li>
+  <li><a href="#result" id="toc-result" class="nav-link" data-scroll-target="#result"><span class="toc-section-number">3.3</span>  Result</a></li>
+  <li><a href="#case-source" id="toc-case-source" class="nav-link" data-scroll-target="#case-source"><span class="toc-section-number">3.4</span>  Case Source</a></li>
   </ul>
 </nav>
     </div>
@@ -179,23 +179,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="german-first-division-basketball-league-scheduling-case-study" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> German First Division Basketball League Scheduling Case Study</h1>
-</section>
-<section id="objective" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> 1. Objective</h1>
+<p><strong>German First Division Basketball League Scheduling Case Study</strong></p>
+<section id="objective" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="objective"><span class="header-section-number">3.1</span> Objective</h2>
 <p>We have seen in real time during the Covid period how unexciting sports events are when played without fans. In addition, a large part of the sports economy consists of support from fans and TV broadcasting revenues. In addition, creating a schedule where athletes can rest as much as possible and as evenly as possible is very important for both athlete health and fair competition.</p>
 </section>
-<section id="constraints" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> 2. Constraints</h1>
-<p>The fact that each team should not play consecutive matches in their own field or away, that the match times of the big teams should not overlap with each other, that the teams that have matches outside the local league on weekdays can rest as equally as possible between the 3 matches they will play in a week are among the important constraints of this case.</p>
-<p>And there are other constraints like matching the most interesting games to available TV slots, minimizing total driving distances</p>
-<p>#3. Result As an example, let’s take the team of Bayern Munich, which also plays in the Euroleague. Let’s assume that the Beko Basketball League matches are played on Friday, Saturday, and Sunday. Likewise, Euroleague matches are played on Thursday - Friday. In this case, it would not be healthy for Bayern Münich to play the Euroleauge game on Thursday and then play the domestic league game on Friday. At the same time, if he played the Euroleague game away, he must play the domestic league game at home so that he has the opportunity to rest at the maximum level. This was just a regular 1 week example for 1 team.</p>
+<section id="constraints" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="constraints"><span class="header-section-number">3.2</span> Constraints</h2>
+<p>The fact that each team should not play consecutive matches in their own field or away, that the match times of the big teams should not overlap with each other, that the teams that have matches outside the local league on weekdays can rest as equally as possible between the 3 matches they will play in a week are among the important constraints of this case. And there are other constraints like matching the most interesting games to available TV slots, minimizing total driving distances.</p>
+</section>
+<section id="result" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="result"><span class="header-section-number">3.3</span> Result</h2>
+<p>As an example, let’s take the team of Bayern Munich, which also plays in the Euroleague. Let’s assume that the Beko Basketball League matches are played on Friday, Saturday, and Sunday. Likewise, Euroleague matches are played on Thursday - Friday. In this case, it would not be healthy for Bayern Münich to play the Euroleauge game on Thursday and then play the domestic league game on Friday. At the same time, if he played the Euroleague game away, he must play the domestic league game at home so that he has the opportunity to rest at the maximum level. This was just a regular 1 week example for 1 team.</p>
 <p>Now lets consider that Basketball Bundesliga is the premier basketball league in Germany with 18 teams and over 300 games each season.</p>
 <p>And with correct objective function &amp; constraints The German First Division Basketball League finds scheduling solutions in less than 20 minutes for previously unsolvable models.</p>
 </section>
-<section id="case-source" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> 4. Case Source</h1>
+<section id="case-source" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="case-source"><span class="header-section-number">3.4</span> Case Source</h2>
 <p>You can reach the original case source below</p>
 <p><a href="https://www.gurobi.com/case_studies/german-first-division-basketball-league-scheduling/">Case Source</a></p>
 

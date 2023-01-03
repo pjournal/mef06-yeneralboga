@@ -3,25 +3,25 @@
     "path": "~/GitHub/mef06-yeneralboga/OR Case.qmd",
     "project_path": "OR Case.qmd",
     "type": "quarto_markdown",
-    "hash": "409703280",
+    "hash": "959207671",
     "contents": "",
     "dirty": false,
     "created": 1672772875299.0,
     "source_on_save": false,
-    "relative_order": 6,
+    "relative_order": 3,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "6,0",
-        "scrollLine": "0"
+        "cursorPosition": "25,171",
+        "scrollLine": "24"
     },
     "folds": "",
-    "lastKnownWriteTime": 1672772965,
+    "lastKnownWriteTime": 1672776168,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1672772965068,
+    "last_content_update": 1672776168476,
     "read_only": false,
     "read_only_alternatives": []
 }
