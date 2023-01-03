@@ -1,0 +1,36 @@
+---
+title: "OR Case"
+author: "Yener Alboga"
+date: "2023-01-03"
+output: html_document
+---
+
+# German First Division Basketball League Scheduling Case Study
+
+# 1. Objective
+  We have seen in real time during the Covid period how unexciting sports events are when played without fans. In addition, a large part of the sports economy consists of support from fans and TV broadcasting revenues. In addition, creating a schedule where athletes can rest as much as possible and as evenly as possible is very important for both athlete health and fair competition.
+
+# 2. Constraints
+  The fact that each team should not play consecutive matches in their own field or away, that the match times of the big teams should not overlap with each other, that the teams that have matches outside the local league on weekdays can rest as equally as possible between the 3 matches they will play in a week are among the important constraints of this case.
+  
+  And there are other constraints like matching the most
+interesting games to available TV slots, minimizing total
+driving distances 
+  
+  
+#3. Result 
+  As an example, let's take the team of Bayern Munich, which also plays in the Euroleague. Let's assume that the Beko Basketball League matches are played on Friday, Saturday, and Sunday. Likewise, Euroleague matches are played on Thursday - Friday. In this case, it would not be healthy for Bayern Münich to play the Euroleauge game on Thursday and then play the domestic league game on Friday. At the same time, if he played the Euroleague game away, he must play the domestic league game at home so that he has the opportunity to rest at the maximum level.
+This was just a regular 1 week example for 1 team. 
+
+Now lets consider that Basketball Bundesliga is the premier basketball league in Germany with 18 teams and over 300 games each season.
+
+And with correct objective function & constraints The German First Division Basketball League finds scheduling
+solutions in less than 20 minutes for previously unsolvable
+models. 
+
+  
+
+# 4. Case Source
+You can reach the original case source below
+
+[Case Source](https://www.gurobi.com/case_studies/german-first-division-basketball-league-scheduling/)
