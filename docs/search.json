@@ -35,13 +35,6 @@
     "text": "1.4 My Progress Journal Home Page\nHome"
   },
   {
-    "objectID": "assignment2.html",
-    "href": "assignment2.html",
-    "title": "2  Assignment 2(Format and output to be updated",
-    "section": "",
-    "text": "3 If we want to see how many flights held by which manufacturers’ planes\nplanes %>% group_by(manufacturer) %>% summarise(count=n()) %>% arrange(desc(count)) %>% print(n=Inf)\n\n\n4 If we want to see how many flights held by which manufacturers’ planes before year 2000 with more than 2 engines\nplanes%>% filter(year<2000 & engines >2)%>% group_by(manufacturer)%>% summarize(count=n())%>% arrange(desc(count))%>% print(n=Inf)"
-  },
-  {
     "objectID": "OR Case.html",
     "href": "OR Case.html",
     "title": "3  OR Case",
@@ -75,5 +68,12 @@
     "title": "3  OR Case",
     "section": "3.4 Case Source",
     "text": "3.4 Case Source\nYou can reach the original case source below\nCase Source"
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "2  Assignment 2",
+    "section": "",
+    "text": "nycflights13::planes\n\n# A tibble: 3,322 × 9\n   tailnum  year type                   manuf…¹ model engines seats speed engine\n   <chr>   <int> <chr>                  <chr>   <chr>   <int> <int> <int> <chr> \n 1 N10156   2004 Fixed wing multi engi… EMBRAER EMB-…       2    55    NA Turbo…\n 2 N102UW   1998 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 3 N103US   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 4 N104UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 5 N10575   2002 Fixed wing multi engi… EMBRAER EMB-…       2    55    NA Turbo…\n 6 N105UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 7 N107US   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 8 N108UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n 9 N109UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n10 N110UW   1999 Fixed wing multi engi… AIRBUS… A320…       2   182    NA Turbo…\n# … with 3,312 more rows, and abbreviated variable name ¹​manufacturer\n\ndata <- planes %>% \n group_by(manufacturer) %>% \n summarise(count=n()) %>% \n arrange(desc(count)) %>% \n print(n=Inf)\n\n# A tibble: 35 × 2\n   manufacturer                  count\n   <chr>                         <int>\n 1 BOEING                         1630\n 2 AIRBUS INDUSTRIE                400\n 3 BOMBARDIER INC                  368\n 4 AIRBUS                          336\n 5 EMBRAER                         299\n 6 MCDONNELL DOUGLAS               120\n 7 MCDONNELL DOUGLAS AIRCRAFT CO   103\n 8 MCDONNELL DOUGLAS CORPORATION    14\n 9 CANADAIR                          9\n10 CESSNA                            9\n11 PIPER                             5\n12 AMERICAN AIRCRAFT INC             2\n13 BEECH                             2\n14 BELL                              2\n15 GULFSTREAM AEROSPACE              2\n16 STEWART MACO                      2\n17 AGUSTA SPA                        1\n18 AVIAT AIRCRAFT INC                1\n19 AVIONS MARCEL DASSAULT            1\n20 BARKER JACK L                     1\n21 CANADAIR LTD                      1\n22 CIRRUS DESIGN CORP                1\n23 DEHAVILLAND                       1\n24 DOUGLAS                           1\n25 FRIEDEMANN JON                    1\n26 HURLEY JAMES LARRY                1\n27 JOHN G HESS                       1\n28 KILDALL GARY                      1\n29 LAMBERT RICHARD                   1\n30 LEARJET INC                       1\n31 LEBLANC GLENN T                   1\n32 MARZ BARRY                        1\n33 PAIR MIKE E                       1\n34 ROBINSON HELICOPTER CO            1\n35 SIKORSKY                          1\n\n\nIf we want to see how many flights held by which manufacturers’ planes before year 2000 with more than 2 engines\n\ndata <- planes %>%\n  filter(year<2000 & engines >2) %>%\n  group_by(manufacturer) %>%\n  summarize(count=n()) %>%\n  arrange(desc(count)) %>%\n  print(n=Inf)\n\n# A tibble: 4 × 2\n  manufacturer           count\n  <chr>                  <int>\n1 AVIONS MARCEL DASSAULT     1\n2 BOEING                     1\n3 CANADAIR LTD               1\n4 DOUGLAS                    1"
   }
 ]

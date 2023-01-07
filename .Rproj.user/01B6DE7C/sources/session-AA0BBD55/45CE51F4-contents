@@ -1,0 +1,103 @@
+---
+title: "BDA503 Final"
+author: "Yener Alboga"
+date: "2023-01-07"
+output: pdf_document
+---
+
+```{r}
+#library(dplyr)
+#library(ggplot2)
+#library(readxl)
+#library(tidyverse)
+#library(cranlogs)
+```
+# Part I: Short and Simple
+  1.Especially recently, I had the opportunity to follow and try Chatgpt. I saw that besides his very good answers and reactions, he could learn simultaneously and use it instantly. As for the question of will they take away jobs, the answers are up to us. We can develop new business areas using these tools, contribute to the development of these tools or increase our. The development of this process will certainly lead to a decrease in demand in some business lines, but I am sure that someone who can use this tool a little more efficiently than everyone else will also see great demand and can get more valuable results from the work he used to do. Instead of Content Writer, we need to be the expert Chatgpt content creator or instead of SEO expert we need to be AI SEO Expert. Technology is developing, we just need to develop ourselves.  
+
+
+
+  2.It can be productive to take note of why and how each step of this manual process is done. Since it is done every day in manually managed processes, we may be adding some comments or cleaning data even if it is not noticed. It's likely that we're managing this based on experience or simple math. However, all of these have a mathematical equivalent or do not contribute to what we need to see. Then we need to look at which process, how much and how we can automate it. Taking both the manual and the automated process together for a while will enable us to see the cases that will enable us to make sure that our product works well and to make improvements where necessary.
+
+
+  3. We can use ggplot to compare downloads of each day & package in a time series plot. We can see each day trend and, we can see which package is more popular in R world. 
+We can easily see that in the Thanksgiving period (23-24 November) total download for each packages dropped a lot. Also, in general rmarkdown, tidyverse, shiny has very similar patterns daily. Its mostly because they used together (or just to not take risk we download them all :). Also, we can see some peaks. (For example, in the first 2 weeks of November for Shiny) We can say that its mostly because of package update releases. People needs to update packages to benefit from the packages and new features.
+
+
+```{r}
+data <- cranlogs::cran_downloads(
+  packages=c("tidyverse","shiny","rmarkdown","reticulate"),
+  from="2022-11-01",to="2022-11-30")
+head(cranlogs::cran_downloads(
+  packages=c("tidyverse","shiny","rmarkdown","reticulate"),
+  from="2022-11-01",to="2022-11-30"))
+
+
+ggplot(data, aes(x = date, y = count)) +
+  geom_line(aes(color = package))+
+  labs(title = "Daily Downloads of  R Packages in Nov 2022")
+  
+```
+# Part 2 : Extending Group Project ( Time and Space)
+```{r datasets, include=FALSE}
+
+bs <- readRDS("docs/balance_sheet.rds")
+i_s <- readRDS("docs/income_statement.rds")
+trade_df <- readRDS("docs/trade.rds")
+price_df <- readRDS("docs/input_cost.rds")
+gdp_df <- readRDS("docs/gdp.rds")
+```
+
+```{r data_preparation, include=FALSE}
+#Before proceeding to EDA, a few minor data manipulation is accomplished to ready data for final use in our analysis.
+bs$accounts <- bs$accounts %>% gsub("\\s+", "_", .)
+bs_df <- bs %>% 
+  filter(accounts %in% c("I-Current_assets", 
+                         "III-Short-term_liabilities", 
+                         "IV-Long-term_liabilities", 
+                         "Total_assets", 
+                         "V-Own_funds")) %>%
+  pivot_wider(names_from = accounts, values_from = value)
+i_s$accounts <- i_s$accounts %>% gsub("\\s+", "_", .)
+net_income <- i_s %>% 
+  filter(accounts == "Net_profit_or_loss_for_the_financial_year") %>% 
+  pivot_wider(names_from = accounts, values_from = value) %>% 
+  pull(Net_profit_or_loss_for_the_financial_year)
+  
+bs_df <- bs_df %>% mutate(net_income_is = net_income)
+
+```
+
+
+#3.Welcome to Real Life
+a) Here some colum name adjustments made to be able to use excel data more easily.Also Excel file format is converted to .Rdata format.
+
+```{r}
+airportfile <-read_excel("docs/Airport Tuik.xlsx")
+
+save(airportfile, file = "docs/Airport Tuik.RData")
+load(file = "docs/Airport Tuik.RData")
+head(airportfile)
+```
+[Link of the Rdata file](https://github.com/pjournal/mef06-yeneralboga/blob/main/docs/Airport%20Tuik.RData)
+
+
+b) I want to have a look to international flights (Number of passengers and  Freight carried (Tons)) especially for the last 2-3 years. Here I expect some interesting figures & graphs thanks to Covid, Russia& Ukraine War & devaluation of TL.
+
+```{r}
+class(airportfile$"International Take off")
+         
+```
+
+```{r}
+Total <- airportfile %>%
+filter(airportfile$Airport == "Türkiye")
+
+Total %>%
+  mutate(IntPasDif = as.numeric(airportfile$"International Take off")- as.numeric(airportfile$"International Landing"))
+
+
+ggplot(Total, aes(x = year, y= as.numeric(airportfile$"International Take off")- as.numeric(airportfile$"International Landing") ))
+
+```
+

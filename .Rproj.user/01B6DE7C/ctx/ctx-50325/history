@@ -1,0 +1,95 @@
+planes %>%
+group_by(manufacturer) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+install.packages("dplyr")
+planes %>%
+group_by(manufacturer) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+library(dplyr)
+library(tidyverse)
+library(nycflights13)
+install.packages("nycflights13")
+install.packages("tidyverse")
+install.packages("dplyr")
+nycflights13::planes
+planes %>%
+group_by(manufacturer) %>%
+summarise(count=n()) %>%
+arrange(desc(count)) %>%
+print(n=Inf)
+flights%>%
+filter(arr_delay > 0)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count)%%
+flights%>%
+filter(arr_delay>0)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count)%%
+flights%>%
+filter(arr_delay>0)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count)
+planes%>%
+planes%>%
+filter(year<2000)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count))
+planes%>%
+filter(year<2000)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count))
+print(n=Inf)
+planes%>%
+filter(year<2000)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count))%>%
+print(n=Inf)
+planes%>%
+filter(year<2000 & engines >2)%>%
+group_by(manufacturer)%>%
+summarize(count=n())%>%
+arrange(desc(count))%>%
+print(n=Inf)
+library(dplyr)
+library(readxl)
+library(lubridate)
+library(tidyr)
+library(ggplot2)
+library(stringi)
+library(hrbrthemes)
+library(dplyr)
+library(readxl)
+library(lubridate)
+library(tidyr)
+library(ggplot2)
+library(scales)
+#read data
+startup <- read_excel("C:/Users/yener/OneDrive/Documents/startup_deals_2021.xlsx")
+#read data
+startup <- read_excel("C:/Users/yener/OneDrive/Documents/startup_deals_2021.xlsx")
+# Convert spaces to underscore in column names
+colnames(startup) <- startup %>%
+colnames() %>%
+gsub(" ", "_", .)
+startup$`Deal_Value_(USD)` <- as.numeric(startup$`Deal_Value_(USD)`)
+# Convert percentages to numeric format
+startup$`Stake_(%)` <- startup$`Stake_(%)` %>%
+gsub("\\..*", "", .) %>%
+gsub("%", "", .) %>%
+as.numeric()
+# Introduction {.unnumbered}
+<!-- DO NOT TOUCH THIS PART EXCEPT FILLING YOUR OR YOUR GROUP's NAME -->
+#install.packages("cranlogs") # install package if not installed
+head(cranlogs::cran_downloads(
+packages=c("tidyverse","shiny","rmarkdown","reticulate"),
+from="2022-11-01",to="2022-11-30"))

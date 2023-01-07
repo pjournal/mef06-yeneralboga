@@ -1,0 +1,33 @@
+---
+title: "Assignment 2"
+date: "2022-10-21"
+---
+```{r load-packages, include=FALSE}
+library ("dplyr")
+library("nycflights13")
+library("tidyverse")
+
+```
+
+# If we want to see how many flights held by which manufacturers' planes
+```{r}
+nycflights13::planes
+data <- planes %>% 
+ group_by(manufacturer) %>% 
+ summarise(count=n()) %>% 
+ arrange(desc(count)) %>% 
+ print(n=Inf)
+```
+# If we want to see how many flights held by which manufacturers' planes before year 2000 with more than 2 engines
+```{r}
+data <- planes %>%
+  filter(year<2000 & engines >2) %>%
+  group_by(manufacturer) %>%
+  summarize(count=n()) %>%
+  arrange(desc(count)) %>%
+  print(n=Inf)
+```  
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

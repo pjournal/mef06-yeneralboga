@@ -1,0 +1,5 @@
+"0","airportfile <-read_excel(""docs/Airport Tuik.xlsx"")"
+"0",""
+"0","save(airportfile, file = ""docs/Airport Tuik.RData"")"
+"0","load(file = ""docs/Airport Tuik.RData"")"
+"0","head(airportfile)"

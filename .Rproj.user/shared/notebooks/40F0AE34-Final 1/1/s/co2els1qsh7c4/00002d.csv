@@ -1,0 +1,6 @@
+"0","data <- cranlogs::cran_downloads("
+"0","  packages=c(""tidyverse"",""shiny"",""rmarkdown"",""reticulate""),"
+"0","  from=""2022-11-01"",to=""2022-11-30"")"
+"0","head(cranlogs::cran_downloads("
+"0","  packages=c(""tidyverse"",""shiny"",""rmarkdown"",""reticulate""),"
+"0","  from=""2022-11-01"",to=""2022-11-30""))"

@@ -1,0 +1,6 @@
+"0",""
+"0","bs <- readRDS(""docs/balance_sheet.rds"")"
+"0","i_s <- readRDS(""docs/income_statement.rds"")"
+"0","trade_df <- readRDS(""docs/trade.rds"")"
+"0","price_df <- readRDS(""docs/input_cost.rds"")"
+"0","gdp_df <- readRDS(""docs/gdp.rds"")"
